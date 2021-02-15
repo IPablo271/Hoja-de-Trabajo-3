@@ -60,9 +60,6 @@ class Radix {
         for (int i = 0; i < n; i++) 
             System.out.print(arr[i] + " "); 
     } 
-  public static int[] prueba(int arr[]){
-        int array []=arr;
-        return array;
-    }
+    
   
 } 

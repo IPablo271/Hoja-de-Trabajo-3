@@ -1,3 +1,7 @@
+//Universidad del Valle de Guatemala.
+//Nombre: Fernanda Argueta y Pablo Gonzalez.
+//Hoja de trabajo 3
+//Clase principal
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -9,13 +13,18 @@ import java.util.*;
 public class main {
   public static void main(String[] args) throws FileNotFoundException {
     Scanner scan = new Scanner(System.in); //Variable asignada para el Scanner.
+    //Se importan los programas de sorting
     SelectionSort s=new SelectionSort();
     GnomeSort g = new GnomeSort();
     QuickSort q = new QuickSort();
+    MergeSort m = new MergeSort();
+    Radix r = new Radix();
+    //MergeSort m = new MergeSort();
     ArrayList<String> miarray = new ArrayList<String>();
     ArrayList<Integer> array2 = new ArrayList<Integer>();
     int[] saved  = new int[3000];
     
+    //se prueba crear el documento y se escriben los números generados aleatoriamente
     try {
       FileWriter myWriter = new FileWriter("filename.txt");
       for(int i=0;i<3000;i++){
@@ -45,6 +54,7 @@ public class main {
         
         
     }
+    //se despliega el menu para el usuario
     int op = 0;
     while (op != 6){
       System.out.println("Ingrese el número del tipo de sorting que desea utilizar");
@@ -56,19 +66,19 @@ public class main {
       System.out.println("6. Salir ");
 
       op = scan.nextInt();
-      if(op == 1){
+      if(op == 1){ //selection sort
         s.sort(saved);
         s.printArray(saved);
-      }else if(op == 2){
+      }else if(op == 2){ //gnome sort
         g.sort(saved);
         g.printArray(saved);
-      }else if(op == 3){
-        //m.sort(saved);
-        //m.printArray(saved);
-      }else if(op == 4){
-        //r.sort(saved);
-        //r.printArray(saved);
-      }else if(op == 5){
+      }else if(op == 3){ //merge sort
+        m.mergeSort(saved,0,2999);
+        m.printArray(saved);
+      }else if(op == 4){ //radix sort
+        r.radixsort(saved,2999);
+        r.print(saved, 2999);
+      }else if(op == 5){ //quick sort
         q.sort(saved,0,2999);
         q.printArray(saved);
       }

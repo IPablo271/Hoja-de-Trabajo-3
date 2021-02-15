@@ -1,3 +1,7 @@
+//Universidad del Valle de Guatemala.
+//Nombre: Fernanda Argueta y Pablo Gonzalez.
+//Hoja de trabajo 3
+//Clase de quick que permite leer el archivo txt
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;

@@ -1,3 +1,8 @@
+//Universidad del Valle de Guatemala.
+//Nombre: Fernanda Argueta y Pablo Gonzalez.
+//Hoja de trabajo 3
+//Clase de merge sorting
+//Referencia: Zobenica, D. (2015, September 2). Sorting Algorithms in Java. Retrieved from GeeksforGeeks website: https://stackabuse.com/sorting-algorithms-in-java/
 public class MergeSort{
 
     

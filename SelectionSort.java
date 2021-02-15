@@ -1,39 +1,39 @@
 //Universidad del Valle de Guatemala.
 //Nombre: Fernanda Argueta y Pablo Gonzalez.
 //Hoja de trabajo 3
-//Clase para ordenar datos con la metodologia de Selectionsort
-//Referencia: Mishra, R. (2014, January 31). Selection Sort - GeeksforGeeks. Retrieved from GeeksforGeeks website: https://www.geeksforgeeks.org/selection-sort/
-public class SelectionSort 
+//Clase de selection sorting
+//Referencia: Zobenica, D. (2015, September 2). Sorting Algorithms in Java. Retrieved from GeeksforGeeks website: https://stackabuse.com/sorting-algorithms-in-java/
+class SelectionSort 
 { 
-    public static void selecsort(int arr[]) 
+    void sort(int arr[]) 
     { 
-        int n = arr.length; //Tamaño del array
+        int n = arr.length; 
+  
+        // One by one move boundary of unsorted subarray 
         for (int i = 0; i < n-1; i++) 
-        { // Encuentra el valor minimo del elemento en un array 
+        { 
+            // Encuentra el valor minimo del elemento en un array 
             int min_idx = i; 
             for (int j = i+1; j < n; j++) 
                 if (arr[j] < arr[min_idx]) 
                     min_idx = j; 
   
-            // Cambia el elemento menor con el primer elemento 
+            // Swap the found minimum element with the first 
+            // element 
             int temp = arr[min_idx]; 
             arr[min_idx] = arr[i]; 
             arr[i] = temp; 
         } 
-        
-        
-    }  
+    } 
+  
     // Imprime el array ingresada
     void printArray(int arr[]) 
     { 
         int n = arr.length; 
-        for (int i=0; i<n; ++i) 
+        for (int i=0; i<n; ++i){ 
             System.out.print(arr[i]+" "); 
-        System.out.println(); 
+            System.out.println(); 
+        }
     } 
-    public static int[] rellenarArrayDesde(int arr[]){
-        int array []=arr;
-        return array;
-    }
 
 } 
