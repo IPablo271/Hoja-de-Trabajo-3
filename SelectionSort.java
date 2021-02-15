@@ -29,5 +29,9 @@ class SelectionSort
             System.out.println(arr[i]+" "); 
         System.out.println(); 
     } 
+     public static int[] prueba(int arr[]){//Metodo para realizar las pruebas unitarias
+        int array []=arr;
+        return array;
+    }
 
 } 
