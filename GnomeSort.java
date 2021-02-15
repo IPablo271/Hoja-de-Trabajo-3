@@ -25,5 +25,9 @@ public class GnomeSort{
             System.out.println(); 
         }
     }
+   
+   public int[] showArray(int saved[]){
+        return saved
+    }
     
 }
