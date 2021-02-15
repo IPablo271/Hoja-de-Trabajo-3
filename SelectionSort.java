@@ -25,13 +25,10 @@ class SelectionSort
     void printArray(int arr[]) 
     { 
         int n = arr.length; 
-        for (int i=0; i<n; ++i) 
-            System.out.println(arr[i]+" "); 
-        System.out.println(); 
+        for (int i=0; i<n; ++i){ 
+            System.out.print(arr[i]+" "); 
+            System.out.println(); 
+        }
     } 
-     public static int[] prueba(int arr[]){//Metodo para realizar las pruebas unitarias
-        int array []=arr;
-        return array;
-    }
 
 } 

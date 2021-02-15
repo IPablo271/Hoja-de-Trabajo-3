@@ -11,6 +11,7 @@ public class main {
     Scanner scan = new Scanner(System.in); //Variable asignada para el Scanner.
     SelectionSort s=new SelectionSort();
     GnomeSort g = new GnomeSort();
+    QuickSort q = new QuickSort();
     ArrayList<String> miarray = new ArrayList<String>();
     ArrayList<Integer> array2 = new ArrayList<Integer>();
     int[] saved  = new int[3000];
@@ -45,12 +46,14 @@ public class main {
         
     }
     int op = 0;
-    while (op != 5){
+    while (op != 6){
       System.out.println("Ingrese el número del tipo de sorting que desea utilizar");
       System.out.println("1. Selection Sort ");
       System.out.println("2. Gnome Sort ");
       System.out.println("3. Merge Sort ");
       System.out.println("4. Radix Sort ");
+      System.out.println("5. Quick Sort ");
+      System.out.println("6. Salir ");
 
       op = scan.nextInt();
       if(op == 1){
@@ -65,6 +68,9 @@ public class main {
       }else if(op == 4){
         //r.sort(saved);
         //r.printArray(saved);
+      }else if(op == 5){
+        q.sort(saved,0,2999);
+        q.printArray(saved);
       }
 
       
