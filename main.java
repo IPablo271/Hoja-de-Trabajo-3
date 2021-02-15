@@ -58,13 +58,13 @@ public class main {
         s.printArray(saved);
       }else if(op == 2){
         g.sort(saved);
-        g.print(saved);
+        g.printArray(saved);
       }else if(op == 3){
         //m.sort(saved);
-        //m.print(saved);
+        //m.printArray(saved);
       }else if(op == 4){
         //r.sort(saved);
-        //r.print(saved);
+        //r.printArray(saved);
       }
 
       

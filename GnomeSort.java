@@ -1,13 +1,16 @@
 
 public class GnomeSort{
     
-    public void gnomesort(int[] saved){
+    public void sort(int saved[] ){
         int i = 2;
-        while (i<n){
+        while (i<saved.length){
             if(saved[i] >= saved[i-1]){
                 i++;
             }else{
-                swap(saved[i], saved[i-1]);
+                int uno = saved[i-1];
+                int dos = saved[i];
+                saved[i] = uno;
+                saved[i-1] = dos;
                 if(i>2){
                     i --;
                 }                
@@ -15,8 +18,8 @@ public class GnomeSort{
         }
     }
 
-    public void printArray(int arr[]){ 
-        int n = arr.length; 
+    public void printArray(int saved[]){ 
+        int n = saved.length; 
         for (int i=0; i<n; ++i){ 
             System.out.print(saved[i]+" "); 
             System.out.println(); 
