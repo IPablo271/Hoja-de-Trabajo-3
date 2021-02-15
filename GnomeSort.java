@@ -1,21 +1,22 @@
 
 public class GnomeSort{
     
-    public void sort(int saved[] ){
-        int i = 2;
-        while (i<saved.length){
-            if(saved[i] >= saved[i-1]){
+    public void sort(int saved[]){
+        for(int i =1 ; i<saved.length;){
+            if(saved[i-1] <= saved[i]){
                 i++;
             }else{
-                int uno = saved[i-1];
-                int dos = saved[i];
-                saved[i] = uno;
-                saved[i-1] = dos;
-                if(i>2){
-                    i --;
-                }                
+                int temp;
+                temp = saved[i-1];
+                saved[i-1] = saved[i];
+                saved[i]=temp;
+                i--;
+            }
+            if(i ==0){
+                i=1;
             }
         }
+        
     }
 
     public void printArray(int saved[]){ 
@@ -25,9 +26,8 @@ public class GnomeSort{
             System.out.println(); 
         }
     }
-   
-   public int[] showArray(int saved[]){
+
+    public int[] showArray(int saved[]){
         return saved;
     }
-    
 }
