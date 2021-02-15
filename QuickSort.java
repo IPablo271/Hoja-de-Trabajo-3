@@ -35,7 +35,7 @@ public class QuickSort{
     }
 
     public int[] showArray(int saved[]){
-        return saved
+        return saved;
     }
     
 }
