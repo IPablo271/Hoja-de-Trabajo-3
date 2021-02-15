@@ -27,7 +27,7 @@ public class GnomeSort{
     }
    
    public int[] showArray(int saved[]){
-        return saved
+        return saved;
     }
     
 }
